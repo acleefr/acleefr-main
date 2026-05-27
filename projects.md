@@ -28,4 +28,4 @@ description: Notes, routines, and life experiments. Documented for the people wh
 
 name: imagesalbumcovers
 url: https://instagram.com/imagesalbumcovers
-description: Instagram account dedicated to album cover art. Aesthetic first.
+description: Instagram bot dedicated to album cover art. Aesthetic first.

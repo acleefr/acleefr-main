@@ -316,6 +316,7 @@ body {
 .theme-switcher-container {
   display: flex;
   justify-content: flex-end;
+  gap: 8px;
   margin-bottom: 24px;
 }
 
@@ -329,6 +330,8 @@ body {
   cursor: pointer;
   border-radius: 4px;
   transition: all 0.15s;
+  text-decoration: none;
+  display: inline-block;
 }
 
 .theme-toggle-btn:hover {
