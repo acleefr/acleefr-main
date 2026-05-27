@@ -1,0 +1,42 @@
+[
+  {
+    "name": "coalition",
+    "url": "https://coalition.aclee.fr",
+    "description": "Strategy game built for the browser. Pick your alliances carefully."
+  },
+  {
+    "name": "it's a trap",
+    "url": "https://youtu.be/xvFZjo5PgG0?si=srivbHj2cGiNdA2i",
+    "description": "A short video project. You'll see."
+  },
+  {
+    "name": "photos",
+    "url": "https://photos.aclee.fr",
+    "description": "Personal photo gallery. Places, moments, nothing curated."
+  },
+  {
+    "name": "randomfriendsepisode",
+    "url": "https://randomfriendsepisode.aclee.fr",
+    "description": "Picks a random Friends episode and opens it directly on Netflix. Solves the 10-minute choosing problem."
+  },
+  {
+    "name": "soulmate",
+    "url": "https://soulmate.aclee.fr",
+    "description": "Calculates how many people in France could be your soulmate based on your criteria. Statistically terrifying."
+  },
+  {
+    "name": "matchday",
+    "url": "https://sport.calendar.aclee.fr",
+    "description": "Sports calendar tracking fixtures and results across leagues."
+  },
+  {
+    "name": "newperspective",
+    "url": "https://aclee.notion.site/New-Perspective-4090ced2b5844e77a21f654859082937",
+    "description": "Notes, routines, and life experiments. Documented for the people who keep asking."
+  },
+  {
+    "name": "imagesalbumcovers",
+    "url": "https://instagram.com/imagesalbumcovers",
+    "description": "Instagram account dedicated to album cover art. Aesthetic first."
+  }
+]
