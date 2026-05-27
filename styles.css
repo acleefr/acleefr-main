@@ -67,15 +67,6 @@ body {
   justify-content: center;
 }
 
-/*
-  Explicit column placement only — let auto-placement handle rows.
-  DOM order: left, projects, center, right.
-  Auto-placement puts left+projects+center in row 1, right in row 2 (col 3 already taken).
-*/
-.column-left    { grid-column: 1; }
-.column-projects { grid-column: 3; }
-.column-center  { grid-column: 2; }
-.column-right   { grid-column: 3; }
 
 /* Column Base Styling */
 .column {
@@ -437,24 +428,43 @@ body {
   to { transform: rotate(360deg); }
 }
 
-/* RESPONSIVE LAYOUT
-   Below 1100px: drop to flex column.
-   DOM order (left → projects → center → right) gives the correct stack:
-   bio, then projects, then blog, then connections. */
+/* RESPONSIVE LAYOUT */
 @media (max-width: 1100px) {
   .site-container {
-    display: flex;
-    flex-direction: column;
-    gap: 48px;
-    padding: 40px 20px;
-    max-width: 640px;
+    grid-template-columns: 250px 1fr;
+    gap: 40px;
   }
-  .column-projects,
   .column-right {
+    grid-column: 1 / -1;
+    margin-top: 40px;
     border-top: 1px solid var(--border-color);
     padding-top: 40px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 48px;
+    align-items: flex-start;
+  }
+  .column-right .project-section {
+    flex: 1;
+    min-width: 200px;
+    margin-bottom: 0;
   }
   .theme-switcher-container {
     justify-content: flex-start;
+    flex-basis: 100%;
+    margin-bottom: 8px;
+  }
+}
+
+@media (max-width: 768px) {
+  .site-container {
+    grid-template-columns: 1fr;
+    gap: 48px;
+    padding: 40px 20px;
+  }
+  .column-right {
+    flex-direction: column;
+    margin-top: 0;
   }
 }
