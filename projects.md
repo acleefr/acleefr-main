@@ -19,7 +19,7 @@ url: https://soulmate.aclee.fr
 description: Calculates how many people in France could be your soulmate based on your criteria. Statistically terrifying.
 
 name: matchday
-url: https://sport.calendar.aclee.fr
+url: https://matchday.aclee.fr
 description: Sports calendar tracking fixtures and results across leagues.
 
 name: newperspective
