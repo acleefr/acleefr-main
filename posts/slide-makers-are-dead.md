@@ -1,6 +1,6 @@
 ---
 title: Slide Makers Are Dead
-date: April 26, 2026
+date: April 19, 2026
 excerpt: Not the people. The old role. Making presentations used to mean spending a huge part of the time on production. AI changes that loop — and changes what the job actually is.
 ---
 

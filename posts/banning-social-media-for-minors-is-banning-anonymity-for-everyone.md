@@ -1,6 +1,6 @@
 ---
 title: Banning Social Media for Minors Is Banning Anonymity for Everyone
-date: April 20, 2026
+date: March 13, 2025
 excerpt: France just voted to ban social media for under-15s. The stated reason is protecting children. The actual result is the end of online anonymity for every French citizen.
 ---
 
