@@ -468,6 +468,15 @@ body {
   }
   .column-right {
     flex-direction: column;
+    flex-wrap: nowrap;
     margin-top: 0;
+  }
+  .theme-switcher-container {
+    flex-basis: auto;
+    justify-content: flex-start;
+    margin-bottom: 16px;
+  }
+  .column-right .project-section {
+    flex: none;
   }
 }
