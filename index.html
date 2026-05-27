@@ -8,14 +8,14 @@
   <title>Arthur Clément | Product Manager & Software Engineer</title>
   <meta name="description"
     content="Arthur Clément - Product & Tech. Savoy - Breizh - Paris. Discover articles, portfolio projects, and professional history.">
-  <link rel="stylesheet" href="styles.css?v=2">
+  <link rel="stylesheet" href="styles.css?v=3">
 </head>
 
 <body>
 
   <div class="site-container">
 
-    <!-- Left Column: Profile, Bio, Previously At, Education, Enjoyer -->
+    <!-- Left Column: Profile, Bio, Career, Education, Enjoyer -->
     <aside class="column column-left">
 
       <!-- Bio Header -->
@@ -98,13 +98,23 @@
 
     </aside>
 
-    <!-- Center Column: Blog Feed (Main Content) -->
+    <!-- Projects Column: desktop = right col top, mobile = above blog -->
+    <section class="column column-projects">
+      <h2 class="section-title">Current Projects</h2>
+      <div id="projects-column-content">
+        <div class="loading-state">
+          <div class="spinner"></div>
+          <p>Loading...</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Center Column: Blog Feed -->
     <main class="column column-center">
       <div class="blog-header-section">
         <h2 class="section-title" style="margin-bottom: 0;">Blog</h2>
       </div>
       <div id="blog-column-content">
-        <!-- Dynamically populated blog feed -->
         <div class="loading-state">
           <div class="spinner"></div>
           <p>Loading posts...</p>
@@ -112,44 +122,12 @@
       </div>
     </main>
 
-    <!-- Right Column: Projects & Social Links -->
+    <!-- Right Column: Theme Toggle & Connections -->
     <aside class="column column-right">
 
       <!-- Theme Toggle -->
       <div class="theme-switcher-container">
         <button class="theme-toggle-btn" id="theme-toggle-action">theme: sand</button>
-      </div>
-
-      <!-- Projects Section -->
-      <div class="project-section">
-        <h2 class="section-title">Current Projects</h2>
-        <div class="project-list">
-          <a href="https://coalition.aclee.fr" target="_blank" class="project-card">
-            <span class="project-url">coalition</span>
-          </a>
-          <a href="https://youtu.be/xvFZjo5PgG0?si=srivbHj2cGiNdA2i" target="_blank" class="project-card">
-            <span class="project-url">it's a trap</span>
-          </a>
-          <a href="https://photos.aclee.fr" target="_blank" class="project-card">
-            <span class="project-url">photos</span>
-          </a>
-          <a href="https://randomfriendsepisode.aclee.fr" target="_blank" class="project-card">
-            <span class="project-url">randomfriendsepisode</span>
-          </a>
-          <a href="https://soulmate.aclee.fr" target="_blank" class="project-card">
-            <span class="project-url">soulmate</span>
-          </a>
-          <a href="https://sport.calendar.aclee.fr" target="_blank" class="project-card">
-            <span class="project-url">matchday</span>
-          </a>
-          <a href="https://aclee.notion.site/New-Perspective-4090ced2b5844e77a21f654859082937" target="_blank"
-            class="project-card">
-            <span class="project-url">newperspective</span>
-          </a>
-          <a href="https://instagram.com/imagesalbumcovers" target="_blank" class="project-card">
-            <span class="project-url">imagesalbumcovers</span>
-          </a>
-        </div>
       </div>
 
       <!-- Socials & Connections -->

@@ -104,6 +104,44 @@ function renderBlogColumn() {
 window.viewPost = function(slug) { activePostSlug = slug; renderBlogColumn(); };
 window.backToFeed = function() { activePostSlug = null; renderBlogColumn(); };
 
+// Parse projects.md — blank-line-separated key: value blocks
+function parseProjects(text) {
+  return text.trim().split(/\n{2,}/).map(block => {
+    const obj = {};
+    block.split('\n').forEach(line => {
+      const idx = line.indexOf(':');
+      if (idx === -1) return;
+      obj[line.slice(0, idx).trim()] = line.slice(idx + 1).trim();
+    });
+    return obj;
+  }).filter(p => p.name && p.url);
+}
+
+function renderProjects(projects) {
+  const container = document.getElementById('projects-column-content');
+  if (!container) return;
+  container.innerHTML = '<div class="project-list-v2">' +
+    projects.map(p => `
+      <div class="project-item">
+        <a href="${p.url}" target="_blank" class="project-name-link">${p.name} →</a>
+        ${p.description ? `<p class="project-description">${p.description}</p>` : ''}
+      </div>`
+    ).join('') +
+    '</div>';
+}
+
+async function loadProjects() {
+  try {
+    const res = await fetch('projects.md');
+    const text = await res.text();
+    renderProjects(parseProjects(text));
+  } catch (err) {
+    console.error('Failed to load projects:', err);
+    const container = document.getElementById('projects-column-content');
+    if (container) container.innerHTML = '';
+  }
+}
+
 // Load posts from /posts directory
 async function loadPosts() {
   try {
@@ -149,5 +187,6 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 
+  loadProjects();
   loadPosts();
 });
