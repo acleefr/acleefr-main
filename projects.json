@@ -1,5 +1,10 @@
 [
   {
+    "name": "open atelier",
+    "url": "https://open-atelier.app",
+    "description": "The AI workspace, easy to use for everyone, for everything."
+  },
+  {
     "name": "matchday",
     "url": "https://matchday.aclee.fr",
     "description": "Sports calendar tracking fixtures and results across leagues."
