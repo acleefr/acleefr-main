@@ -43,5 +43,9 @@
     "name": "imagesalbumcovers",
     "url": "https://instagram.com/imagesalbumcovers",
     "description": "Instagram bot dedicated to album cover art. Aesthetic first."
+  },
+  {
+    "name": "weirwood",
+    "url": "http://weirwood.aclee.fr"
   }
 ]
