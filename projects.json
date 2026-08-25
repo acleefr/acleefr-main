@@ -1,5 +1,10 @@
 [
   {
+    "name": "weirwood",
+    "url": "http://weirwood.aclee.fr",
+    "description": "Dynamic family tree of the Game of Thrones universe."
+  },
+  {
     "name": "open atelier",
     "url": "https://open-atelier.app",
     "description": "The AI workspace, easy to use for everyone, for everything."
@@ -43,9 +48,5 @@
     "name": "imagesalbumcovers",
     "url": "https://instagram.com/imagesalbumcovers",
     "description": "Instagram bot dedicated to album cover art. Aesthetic first."
-  },
-  {
-    "name": "weirwood",
-    "url": "http://weirwood.aclee.fr"
   }
 ]
