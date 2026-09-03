@@ -1,0 +1,13 @@
+# Never let the HTML shell be cached, so deploys are picked up immediately
+<IfModule mod_headers.c>
+  <FilesMatch "\.html$">
+    Header set Cache-Control "no-cache, must-revalidate"
+  </FilesMatch>
+  <FilesMatch "\.(css|js)$">
+    Header set Cache-Control "public, max-age=3600"
+  </FilesMatch>
+</IfModule>
+
+<IfModule mod_dir.c>
+  DirectoryIndex index.html
+</IfModule>

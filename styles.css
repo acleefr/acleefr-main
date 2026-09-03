@@ -353,6 +353,12 @@ body {
   background-color: var(--card-hover-bg);
 }
 
+.theme-toggle-btn:active {
+  color: var(--text-color);
+  border-color: var(--text-color);
+  background-color: var(--card-hover-bg);
+}
+
 /* Compact icon-only buttons (theme toggle + login on mobile) */
 .icon-btn {
   display: inline-flex;
