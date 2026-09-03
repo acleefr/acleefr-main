@@ -1,5 +1,10 @@
 [
   {
+    "name": "worth",
+    "url": "https://worth.aclee.fr",
+    "description": "A catalog of taste: what I own, want, and dream of owning — and a commitment to buy less, better."
+  },
+  {
     "name": "weirwood",
     "url": "http://weirwood.aclee.fr",
     "description": "Dynamic family tree of the Game of Thrones universe."
@@ -48,10 +53,5 @@
     "name": "imagesalbumcovers",
     "url": "https://instagram.com/imagesalbumcovers",
     "description": "Instagram bot dedicated to album cover art. Aesthetic first."
-  },
-  {
-    "name": "worth",
-    "url": "https://worth.aclee.fr",
-    "description": "A catalog of taste: what I own, want, and dream of owning — and a commitment to buy less, better."
   }
 ]
