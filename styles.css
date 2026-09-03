@@ -310,26 +310,37 @@ body {
   font-style: italic;
 }
 
-/* RIGHT COLUMN */
-
-/* Theme Selector Button */
+/* Theme Selector (desktop: top-right of right column) + Mobile Section Nav (left column, mobile only) */
 .theme-switcher-container {
   display: flex;
-  justify-content: flex-end;
+  flex-wrap: wrap;
   gap: 8px;
-  margin-bottom: 24px;
+  margin-bottom: 32px;
+}
+
+.desktop-actions {
+  justify-content: flex-end;
+}
+
+/* Mobile action row - hidden on desktop, shown at the 768px breakpoint */
+.mobile-actions {
+  display: none;
 }
 
 .theme-toggle-btn {
+  appearance: none;
+  -webkit-appearance: none;
+  box-sizing: border-box;
   background: none;
   border: 1px solid var(--border-color);
   color: var(--text-muted);
   font-family: var(--font-mono);
   font-size: 11px;
+  line-height: 1.4;
   padding: 4px 10px;
   cursor: pointer;
   border-radius: 4px;
-  transition: all 0.15s;
+  transition: color 0.15s, border-color 0.15s, background-color 0.15s;
   text-decoration: none;
   display: inline-block;
 }
@@ -339,6 +350,49 @@ body {
   border-color: var(--text-color);
   background-color: var(--card-hover-bg);
 }
+
+/* Compact icon-only buttons (theme toggle + login on mobile) */
+.icon-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.icon-btn svg {
+  width: 12px;
+  height: 12px;
+  display: block;
+}
+
+.icon-btn .icon-sun,
+.icon-btn .icon-moon {
+  display: none;
+}
+
+.icon-btn .icon-moon {
+  display: block;
+}
+
+:root[data-theme="dark"] .icon-btn .icon-sun {
+  display: block;
+}
+
+:root[data-theme="dark"] .icon-btn .icon-moon {
+  display: none;
+}
+
+/* Mobile section-switch buttons - hidden on desktop, shown at the 768px breakpoint */
+.tab-btn {
+  display: none;
+}
+
+.tab-btn.active {
+  color: var(--bg-color);
+  background-color: var(--text-color);
+  border-color: var(--text-color);
+}
+
+/* RIGHT COLUMN */
 
 /* Project Cards */
 .project-section {
@@ -453,11 +507,6 @@ body {
     min-width: 200px;
     margin-bottom: 0;
   }
-  .theme-switcher-container {
-    justify-content: flex-start;
-    flex-basis: 100%;
-    margin-bottom: 8px;
-  }
 }
 
 @media (max-width: 768px) {
@@ -470,13 +519,61 @@ body {
     flex-direction: column;
     flex-wrap: nowrap;
     margin-top: 0;
-  }
-  .theme-switcher-container {
-    flex-basis: auto;
-    justify-content: flex-start;
-    margin-bottom: 16px;
+    padding-top: 0;
+    border-top: none;
   }
   .column-right .project-section {
     flex: none;
+  }
+
+  /* Section-switch buttons: shown only at this breakpoint, one panel visible at a time */
+  .tab-btn {
+    display: inline-block;
+  }
+
+  .desktop-actions {
+    display: none;
+  }
+
+  .mobile-actions {
+    display: flex;
+    flex-wrap: nowrap;
+    gap: 5px;
+  }
+
+  /* Shrink the row so all six controls fit on one line without scrolling */
+  .mobile-actions .theme-toggle-btn {
+    flex: none;
+    font-size: 10px;
+    padding: 4px 7px;
+  }
+
+  .mobile-actions .icon-btn {
+    padding: 4px 6px;
+  }
+
+  .mobile-actions .icon-btn svg {
+    width: 11px;
+    height: 11px;
+  }
+
+  body[data-mobile-view] #panel-resume,
+  body[data-mobile-view] #panel-blog,
+  body[data-mobile-view] #panel-projects,
+  body[data-mobile-view] #panel-connections {
+    display: none;
+  }
+
+  body[data-mobile-view="resume"] #panel-resume {
+    display: block;
+  }
+
+  body[data-mobile-view="blog"] #panel-blog {
+    display: flex;
+  }
+
+  body[data-mobile-view="projects"] #panel-projects,
+  body[data-mobile-view="connections"] #panel-connections {
+    display: block;
   }
 }

@@ -155,24 +155,37 @@ async function loadPosts() {
 function setTheme(themeName) {
   if (themeName === 'dark') {
     document.documentElement.setAttribute('data-theme', 'dark');
-    document.getElementById('theme-toggle-action').textContent = 'theme: dark';
   } else {
     document.documentElement.removeAttribute('data-theme');
-    document.getElementById('theme-toggle-action').textContent = 'theme: sand';
   }
+  document.querySelectorAll('.theme-toggle-label').forEach(label => {
+    label.textContent = themeName === 'dark' ? 'theme: dark' : 'theme: sand';
+  });
   currentTheme = themeName;
   localStorage.setItem('theme', themeName);
+}
+
+// Mobile tab navigation (resume / blog / projects / connections)
+function setMobileView(target) {
+  document.body.setAttribute('data-mobile-view', target);
+  document.querySelectorAll('.tab-btn').forEach(btn => {
+    btn.classList.toggle('active', btn.dataset.target === target);
+  });
 }
 
 // Initial Setup
 document.addEventListener('DOMContentLoaded', () => {
   setTheme(currentTheme);
-  const toggleBtn = document.getElementById('theme-toggle-action');
-  if (toggleBtn) {
-    toggleBtn.addEventListener('click', () => {
+  document.querySelectorAll('.theme-toggle-action').forEach(btn => {
+    btn.addEventListener('click', () => {
       setTheme(currentTheme === 'sand' ? 'dark' : 'sand');
     });
-  }
+  });
+
+  document.querySelectorAll('.tab-btn').forEach(btn => {
+    btn.addEventListener('click', () => setMobileView(btn.dataset.target));
+  });
+  setMobileView('resume');
 
   loadProjects();
   loadPosts();

@@ -8,7 +8,7 @@
   <title>Arthur Clément | Product Manager & Software Engineer</title>
   <meta name="description"
     content="Arthur Clément - Product & Tech. Savoy - Breizh - Paris. Discover articles, portfolio projects, and professional history.">
-  <link rel="stylesheet" href="styles.css?v=5">
+  <link rel="stylesheet" href="styles.css?v=10">
 </head>
 
 <body>
@@ -33,74 +33,93 @@
         execution.
       </p>
 
-      <!-- Currently At Section -->
-      <div class="resume-section">
-        <h2 class="section-title">Currently at</h2>
-        <ul class="flat-list">
-          <li>
-            <a href="https://diabolocom.com" target="_blank">Diabolocom</a>
-          </li>
-        </ul>
+      <!-- Mobile Section Nav + compact Theme Toggle / Login (hidden on desktop) -->
+      <div class="theme-switcher-container mobile-actions">
+        <button class="theme-toggle-btn tab-btn active" data-target="resume">Resume</button>
+        <button class="theme-toggle-btn tab-btn" data-target="blog">Blog</button>
+        <button class="theme-toggle-btn tab-btn" data-target="projects">Projects</button>
+        <button class="theme-toggle-btn tab-btn" data-target="connections">Connections</button>
+        <button class="theme-toggle-btn icon-btn theme-toggle-action" aria-label="Toggle theme">
+          <svg class="icon-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="5"></circle><line x1="12" y1="1" x2="12" y2="3"></line><line x1="12" y1="21" x2="12" y2="23"></line><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line><line x1="1" y1="12" x2="3" y2="12"></line><line x1="21" y1="12" x2="23" y2="12"></line><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line></svg>
+          <svg class="icon-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path></svg>
+        </button>
+        <a href="https://cp1.obambu.com:2083" target="_blank" class="theme-toggle-btn icon-btn" aria-label="Login">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path><circle cx="12" cy="7" r="4"></circle></svg>
+        </a>
       </div>
 
-      <!-- Previously At Section -->
-      <div class="resume-section">
-        <h2 class="section-title">Previously at</h2>
-        <ul class="flat-list">
-          <li>
-            <a href="https://oneclicklca.com/fr/resources/press-release/one-click-lca-acquires-buildrz"
-              target="_blank">Buildrz</a>
-          </li>
-          <li>
-            <a href="https://www.sfr.fr/" target="_blank">SFR</a>
-          </li>
-          <li>
-            <a href="https://www.defense.gouv.fr/dirisi" target="_blank">DIRISI</a>
-          </li>
-          <li>
-            <a href="https://www.zeborne.com/fr/" target="_blank">Zeborne</a>
-          </li>
-        </ul>
-      </div>
+      <div id="panel-resume">
 
-      <!-- Learn From Section -->
-      <div class="resume-section">
-        <h2 class="section-title">Learn from</h2>
-        <ul class="flat-list">
-          <li>
-            <a href="https://www.efrei.fr/" target="_blank">Efrei Paris</a>
-          </li>
-          <li>
-            <a href="https://42.fr/" target="_blank">École 42</a>
-          </li>
-        </ul>
-      </div>
-
-      <!-- Enjoyer Section -->
-      <div class="resume-section">
-        <h2 class="section-title">Enjoyer of</h2>
-        <div class="enjoyer-tags">
-          <span>freedom</span>
-          <span>trailrunning</span>
-          <span>sub3 marathon</span>
-          <span>sailing boats</span>
-          <span>surf</span>
-          <span>ski</span>
-          <span>beers</span>
-          <span>cigs</span>
-          <span>nice cars</span>
-          <span>suvs</span>
-          <span>tradition</span>
-          <span>european summers</span>
-          <span>stocks</span>
-          <span>shittalking</span>
+        <!-- Currently At Section -->
+        <div class="resume-section">
+          <h2 class="section-title">Currently at</h2>
+          <ul class="flat-list">
+            <li>
+              <a href="https://diabolocom.com" target="_blank">Diabolocom</a>
+            </li>
+          </ul>
         </div>
+
+        <!-- Previously At Section -->
+        <div class="resume-section">
+          <h2 class="section-title">Previously at</h2>
+          <ul class="flat-list">
+            <li>
+              <a href="https://oneclicklca.com/fr/resources/press-release/one-click-lca-acquires-buildrz"
+                target="_blank">Buildrz</a>
+            </li>
+            <li>
+              <a href="https://www.sfr.fr/" target="_blank">SFR</a>
+            </li>
+            <li>
+              <a href="https://www.defense.gouv.fr/dirisi" target="_blank">DIRISI</a>
+            </li>
+            <li>
+              <a href="https://www.zeborne.com/fr/" target="_blank">Zeborne</a>
+            </li>
+          </ul>
+        </div>
+
+        <!-- Learn From Section -->
+        <div class="resume-section">
+          <h2 class="section-title">Learn from</h2>
+          <ul class="flat-list">
+            <li>
+              <a href="https://www.efrei.fr/" target="_blank">Efrei Paris</a>
+            </li>
+            <li>
+              <a href="https://42.fr/" target="_blank">École 42</a>
+            </li>
+          </ul>
+        </div>
+
+        <!-- Enjoyer Section -->
+        <div class="resume-section">
+          <h2 class="section-title">Enjoyer of</h2>
+          <div class="enjoyer-tags">
+            <span>freedom</span>
+            <span>trailrunning</span>
+            <span>sub3 marathon</span>
+            <span>sailing boats</span>
+            <span>surf</span>
+            <span>ski</span>
+            <span>beers</span>
+            <span>cigs</span>
+            <span>nice cars</span>
+            <span>suvs</span>
+            <span>tradition</span>
+            <span>european summers</span>
+            <span>stocks</span>
+            <span>shittalking</span>
+          </div>
+        </div>
+
       </div>
 
     </aside>
 
     <!-- Center Column: Blog Feed -->
-    <main class="column column-center">
+    <main class="column column-center" id="panel-blog">
       <div class="blog-header-section">
         <h2 class="section-title" style="margin-bottom: 0;">Blog</h2>
       </div>
@@ -112,17 +131,19 @@
       </div>
     </main>
 
-    <!-- Right Column: Theme Toggle, Projects & Connections -->
+    <!-- Right Column: Theme Toggle, Login, Projects & Connections -->
     <aside class="column column-right">
 
-      <!-- Theme Toggle + Login -->
-      <div class="theme-switcher-container">
-        <button class="theme-toggle-btn" id="theme-toggle-action">theme: sand</button>
+      <!-- Theme Toggle + Login (desktop only) -->
+      <div class="theme-switcher-container desktop-actions">
+        <button class="theme-toggle-btn theme-toggle-action" aria-label="Toggle theme">
+          <span class="theme-toggle-label">theme: sand</span>
+        </button>
         <a href="https://cp1.obambu.com:2083" target="_blank" class="theme-toggle-btn">login</a>
       </div>
 
       <!-- Projects Section -->
-      <div class="project-section">
+      <div class="project-section" id="panel-projects">
         <h2 class="section-title">Some Projects</h2>
         <div id="projects-column-content">
           <div class="loading-state">
@@ -133,7 +154,7 @@
       </div>
 
       <!-- Socials & Connections -->
-      <div class="project-section">
+      <div class="project-section" id="panel-connections">
         <h2 class="section-title">Connections</h2>
         <ul class="flat-list socials-list">
           <li>
