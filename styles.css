@@ -343,6 +343,8 @@ body {
   transition: color 0.15s, border-color 0.15s, background-color 0.15s;
   text-decoration: none;
   display: inline-block;
+  touch-action: manipulation;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0.1);
 }
 
 .theme-toggle-btn:hover {
@@ -537,24 +539,31 @@ body {
 
   .mobile-actions {
     display: flex;
-    flex-wrap: nowrap;
-    gap: 5px;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 3px;
+    row-gap: 6px;
   }
 
-  /* Shrink the row so all six controls fit on one line without scrolling */
+  /* Keep the row on one line by staying narrow, but keep touch targets tall enough to tap reliably */
   .mobile-actions .theme-toggle-btn {
     flex: none;
     font-size: 10px;
-    padding: 4px 7px;
+    padding: 0 6px;
+    height: 34px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
   }
 
   .mobile-actions .icon-btn {
-    padding: 4px 6px;
+    padding: 0 8px;
+    min-width: 34px;
   }
 
   .mobile-actions .icon-btn svg {
-    width: 11px;
-    height: 11px;
+    width: 13px;
+    height: 13px;
   }
 
   body[data-mobile-view] #panel-resume,
