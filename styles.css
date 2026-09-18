@@ -115,6 +115,10 @@ body {
   margin-top: 1px;
 }
 
+.profile-loc-sub {
+  font-size: 9px;
+}
+
 .bio-text {
   font-size: 14px;
   color: var(--text-muted);
